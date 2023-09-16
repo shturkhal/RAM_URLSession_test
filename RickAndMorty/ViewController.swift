@@ -13,19 +13,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         var newColor = Settings.shared.colorTheme
         view.backgroundColor = newColor
-        
-        
         myLabel.frame = CGRect(x: 100, y: 350, width: 300, height: 300)
         self.view.addSubview(myLabel)
-        
         // create urlString
         let urlString = "https://rickandmortyapi.com/api/character/108"
         // check with guard URL string
         guard let url = URL(string: urlString) else { return }
-        
         // START URL Session with dataTask
         URLSession.shared.dataTask(with: url) { data, response, error in // (response) це відповідь з сервера
             // inside of URLSession we check with IF LET error
@@ -48,8 +43,5 @@ class ViewController: UIViewController {
             print(session.episode)
             // END the URLSession with response
         }.resume()
-        
-        
     }
-    
 }
