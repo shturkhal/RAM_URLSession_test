@@ -10,12 +10,14 @@ import UIKit
 class ViewController: UIViewController {
     
     var myLabel = UILabel()
+    var myImage = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         var newColor = Settings.shared.colorTheme
         view.backgroundColor = newColor
         myLabel.frame = CGRect(x: 100, y: 350, width: 300, height: 300)
+        
         self.view.addSubview(myLabel)
         // create urlString
         let urlString = "https://rickandmortyapi.com/api/character/108"
