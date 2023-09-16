@@ -9,16 +9,13 @@ import UIKit
 
 class Settings {
     
+    var mainVC = ViewController()
+    
     static var shared = Settings()
     var colorTheme = UIColor.cyan
     
     
-    func setUpImage(imageView: UIImageView, mainView: UIViewController) {
-        NSLayoutConstraint.activate([
-            imageView.centerYAnchor.constraint(equalTo: mainView.view.centerYAnchor),
-            imageView.centerXAnchor.constraint(equalTo: mainView.view.centerXAnchor)
-        ])
-    }
+    
     
     private init() {}
 
